@@ -132,3 +132,19 @@ function anagram(var1, var2) {
     return flag;
 }
 
+
+var3 = [];
+
+function rec(var1, var2) {
+
+    if (var1 <= var2) {
+        var3.push(var1)
+        var1++;
+        rec(var1, var2)
+    }
+}
+rec(1, 10)
+
+console.log(var3);
+
+    
