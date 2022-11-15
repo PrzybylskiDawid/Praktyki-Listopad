@@ -1,0 +1,34 @@
+const liczby1 = [1,2,3,4,5];
+const liczby2 = [6,7,8,9,10];
+
+
+const arr1 = ["Anna", "Maria"];
+
+// 1
+const last = liczby3.reverse()
+console.log("zadanie 1: " + last[0])
+
+// 2
+let szczalka = (liczby1, liczby2) => [...liczby1, ...liczby2];
+
+console.log("zadanie 2: " + szczalka(liczby1, liczby2))
+
+// 3
+
+const filter = liczby3.filter(liczby => liczby >= 2);
+
+console.log("zadanie 3: " + filter)
+
+// 4
+const initialValue = 0;
+const sumWithInitial = liczby3.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+console.log("zadanie 4: " + sumWithInitial);
+
+// 5
+const map = liczby3.map(x => x * x + 3);
+console.log("zadanie 5: " + map);
+
