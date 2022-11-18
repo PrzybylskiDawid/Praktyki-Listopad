@@ -147,4 +147,37 @@ rec(1, 10)
 
 console.log(var3);
 
-    
+
+// 18.11.2022
+
+const arr1 = ["Anna", "Maria"];
+const arr2 = ["Adam", "Marek", "Bartek", "Tomek"];
+const numbers = [1, 2, 3, 4, 5];
+
+// 1
+let szczalka = (arr1, arr2) => [...arr1, ...arr2];
+
+console.log("zadanie 1: " + szczalka(arr1, arr2))
+
+// 2
+let szczalka2 = (arr1) => [arr1.reverse()[0]];
+
+console.log("zadanie 2: " + szczalka2(arr1))
+
+// 3
+const filter = numbers.filter(numbers => numbers >= 2);
+
+console.log("zadanie 3: " + filter)
+
+// 4
+const initialValue = 0;
+const sumWithInitial = numbers.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+console.log("zadanie 4: " + sumWithInitial);
+
+// 5
+const map = numbers.map(x => x * x + 3);
+console.log("zadanie 5: " + map);
