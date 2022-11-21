@@ -181,3 +181,39 @@ console.log("zadanie 4: " + sumWithInitial);
 // 5
 const map = numbers.map(x => x * x + 3);
 console.log("zadanie 5: " + map);
+
+const books = [
+    {title: 'Total loss', pages: 600, genre: 'fantasy', rating: 5},
+    {title: 'Total enlightenment', pages: 250, genre: 'romance', rating: 2},
+    {title: 'Big loss', pages: 400, genre: 'fantasy', rating: 7},
+    {title: '10th Joy', pages: 32, genre: 'action', rating: 8},
+    {title: 'Quickfix', pages: 15, genre: 'fantasy', rating: 1},
+    {title: 'World Ender', pages: 199, genre: 'fantasy', rating: 3},
+    {title: 'Paranormal', pages: 200, genre: 'thriller', rating: 9},
+    {title: '300', pages: 600, genre: 'criminology', rating: 10},
+    {title: 'Renewer', pages: 472, genre: 'biology', rating: 2},
+ ];
+ 
+ const compose = (...fns) => (x) => fns.reduceRight((acc, fn) => fn(acc), x);
+ 
+ // 6
+ const TitleLength = (book) => book.map(book => book.title.split(' ').join('').length) 
+ const FilterTitleEndsWithY = (list) => list.filter((book) => book.genre.endsWith('y'));
+ const EvenPages = (list) => list.filter((book) => book.pages % 2 == 0);
+ 
+ const zad6 = compose(TitleLength, FilterTitleEndsWithY, EvenPages)
+ 
+ console.log("zadanie 6: " + zad6(books));
+ 
+ // 7
+ const SumRatings = (book) => book.reduce((currSum, newRate) => currSum + newRate, 0)
+ const OddPages = (list) => list.filter((book) => book.pages % 2 != 0);
+ const OddPositiveRating = (list) => list.filter((book) => book.rating > 5);
+ const TitleWithNumber = (list) => list.filter((book) => /\d/.test(book.title));
+ 
+ const zad7 = compose(SumRatings, OddPages, OddPositiveRating, TitleWithNumber) 
+ 
+ console.log("zadanie 7: " + zad7(books));
+ 
+ // 8
+ 
