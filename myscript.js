@@ -216,4 +216,48 @@ const books = [
  console.log("zadanie 7: " + zad7(books));
  
  // 8
+
+ /*
+
+Zadanie 10. (2pkt)
+Napisz funkcję multiplyAsync(x,y), która zwraca obiekt klasy Promise, kończący się 
+porażką, gdy któryś za argumentów jest niepoprawny (nie jest liczbą). W przeciwnym
+ przypadku zwraca iloczyn dwóch liczb. Napisz callback (wywołanie w konsoli), który
+  wypisuje wynik w konsoli.
+
+ */
+
+// 9
+
+const promise = new Promise(function(Resolve) {
+    setTimeout(function(){Resolve("Udało się!"); }, 5000);
+  });
+  
+  promise.then(function(value) {
+    console.log(value);
+  });
+
+
+// 10
+function multiplyAsync(x, y) {
+    
+    const promise10 = new Promise((resolve, reject) =>{
+
+        if (typeof x === 'number' && typeof y === 'number') {
+            resolve(x * y)
+        }
+        else{
+            reject("zły typ >:(")
+        }
+    })
+
+    promise10.then((result)=>
+
+        console.log(result))
+    .catch(error=>console.error(error))
+        
  
+
+}   
+
+multiplyAsync(2,"h")
