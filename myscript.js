@@ -217,16 +217,6 @@ const books = [
  
  // 8
 
- /*
-
-Zadanie 10. (2pkt)
-Napisz funkcję multiplyAsync(x,y), która zwraca obiekt klasy Promise, kończący się 
-porażką, gdy któryś za argumentów jest niepoprawny (nie jest liczbą). W przeciwnym
- przypadku zwraca iloczyn dwóch liczb. Napisz callback (wywołanie w konsoli), który
-  wypisuje wynik w konsoli.
-
- */
-
 // 9
 
 const promise = new Promise(function(Resolve) {
